@@ -1,21 +1,26 @@
 # Changelog
 
-All notable changes to this project will be documented here.
-
-This project follows a lightweight Keep a Changelog-style format. Until a first release is published, work is tracked under **Unreleased**.
+All notable changes to this project are documented here.
 
 ## [Unreleased]
 
 ### Added
-- Initial project scope and intended audience documented.
-- Initial README, roadmap, and changelog created.
-- Planned first milestone: Build the responsive CRM shell with realistic synthetic contacts and a working lead pipeline.
+- React + TypeScript + Vite application foundation.
+- Northstar CRM responsive sales workspace UI.
+- Synthetic contact and opportunity dataset.
+- Dashboard KPIs for open pipeline, won revenue, contacts, and pending tasks.
+- Contact search and validated add-contact workflow.
+- Five-stage opportunity board with editable stage assignments.
+- Follow-up task completion controls.
+- Browser localStorage persistence for contact and task changes.
+- Unit tests for pipeline totals, stage counts, contact search, and currency formatting.
+- GitHub Actions workflow for tests and production build.
+- GitHub Pages deployment workflow.
 
-### Planned
-- Implement the core typescript crm platform workflow.
-- Add automated tests and reproducible sample data where applicable.
-- Publish and verify the public demonstration.
+### Changed
+- README and roadmap now distinguish implemented MVP functionality from pending CI, Pages activation, and live acceptance checks.
 
-### Notes
-- No application functionality is claimed as complete by this documentation-only baseline.
-- Release dates and version numbers will be added when actual releases are created.
+### Pending verification
+- CI test and production build results.
+- GitHub Pages repository configuration and deployment.
+- End-to-end verification of contact creation, stage updates, and task persistence in a deployed browser session.
