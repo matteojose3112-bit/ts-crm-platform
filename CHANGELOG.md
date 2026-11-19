@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented here.
 
-## [Unreleased]
+## 0.1.0 — Public MVP
 
 ### Added
 - React + TypeScript + Vite application foundation.
@@ -16,11 +16,9 @@ All notable changes to this project are documented here.
 - Unit tests for pipeline totals, stage counts, contact search, and currency formatting.
 - GitHub Actions workflow for tests and production build.
 - GitHub Pages deployment workflow.
+- Public demo: https://matteojose3112-bit.github.io/ts-crm-platform/
 
-### Changed
-- README and roadmap now distinguish implemented MVP functionality from pending CI, Pages activation, and live acceptance checks.
-
-### Pending verification
-- CI test and production build results.
-- GitHub Pages repository configuration and deployment.
-- End-to-end verification of contact creation, stage updates, and task persistence in a deployed browser session.
+### Verified
+- GitHub Actions CI completed successfully on commit `638821a3cba7d66342e15e1d557ec427469579ef`.
+- GitHub Pages deployment completed successfully on the same commit.
+- Production build completed in the deployment workflow.
