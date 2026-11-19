@@ -2,10 +2,10 @@
 
 > A lightweight CRM workspace for organizing contacts, tracking opportunities, and managing sales follow-ups.
 
-**Status:** Interactive MVP implemented; CI and Pages deployment verification pending  
+**Status:** MVP deployed; CI and GitHub Pages deployment passed  
 **Primary language:** TypeScript  
 **Frontend:** React + Vite  
-**Live demo:** Pending GitHub Pages activation and verification
+**Live demo:** https://matteojose3112-bit.github.io/ts-crm-platform/
 
 ## Overview
 
@@ -27,37 +27,10 @@ All included people and companies are synthetic demonstration records.
 
 ## Technology
 
-- TypeScript
-- React 18
-- Vite
+- TypeScript, React 18, Vite
 - Vitest
-- GitHub Actions
-- GitHub Pages (deployment workflow configured; activation/verification pending)
-
-## Project structure
-
-```text
-ts-crm-platform/
-├── .github/workflows/
-│   ├── ci.yml
-│   └── deploy.yml
-├── src/
-│   ├── App.tsx
-│   ├── crm.ts
-│   ├── data.ts
-│   ├── main.tsx
-│   ├── styles.css
-│   └── types.ts
-├── tests/
-│   └── crm.test.ts
-├── index.html
-├── package.json
-├── tsconfig*.json
-├── vite.config.ts
-├── README.md
-├── ROADMAP.md
-└── CHANGELOG.md
-```
+- GitHub Actions CI
+- GitHub Pages
 
 ## Run locally
 
@@ -82,11 +55,13 @@ The starter workspace is populated with fictional contacts, opportunity values, 
 
 There is no server-side database, authentication, multi-user synchronization, or real email/calendar integration in this MVP. Do not enter confidential customer information.
 
-## Deployment
+## Deployment and checks
 
-A GitHub Actions workflow is configured to build the Vite app and publish the `dist/` directory to GitHub Pages. GitHub Pages must be enabled with GitHub Actions as its build source in repository settings before the public demo can be considered live.
+The public demo is published through GitHub Pages. The latest CI run (tests and production build) and the latest Pages deployment both completed successfully.
 
-The live URL will be added here after the workflow succeeds and the deployed application is verified.
+- [Live Northstar CRM demo](https://matteojose3112-bit.github.io/ts-crm-platform/)
+- [Latest CI run](https://github.com/matteojose3112-bit/ts-crm-platform/actions/runs/44617813998)
+- [Latest Pages deployment](https://github.com/matteojose3112-bit/ts-crm-platform/actions/runs/44617814072)
 
 ## Roadmap and changelog
 
@@ -102,5 +77,4 @@ Typed frontend architecture, reusable React components, data modeling, business 
 - Browser-local data only; no backend or cross-device synchronization.
 - No authentication, roles, or team collaboration.
 - No import/export or external CRM integrations yet.
-- Automated test and production build results have not yet been verified in CI.
-- GitHub Pages activation and live browser acceptance remain pending.
+- The public demo uses synthetic records; do not enter confidential customer data.
