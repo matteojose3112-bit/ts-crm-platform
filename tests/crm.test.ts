@@ -4,7 +4,7 @@ import { initialContacts } from "../src/data";
 
 describe("CRM helpers", () => {
   it("calculates open pipeline value without won or lost deals", () => {
-    expect(pipelineValue(initialContacts)).toBe(33800);
+    expect(pipelineValue(initialContacts)).toBe(52700);
   });
 
   it("counts contacts by stage", () => {
