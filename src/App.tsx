@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import type { FormEvent } from "react";
 import { initialContacts, initialTasks } from "./data";
 import { formatCurrency, pipelineValue, searchContacts, stages, stageCounts } from "./crm";
 import type { Contact, LeadStage, NavigationSection, Task } from "./types";
@@ -44,7 +45,7 @@ function App() {
     localStorage.setItem("northstar-crm-tasks", JSON.stringify(next));
   }
 
-  function addContact(event: React.FormEvent<HTMLFormElement>) {
+  function addContact(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const name = String(form.get("name") || "").trim();
