@@ -13,26 +13,25 @@ Items are complete only when implemented and verified.
 - [x] Add task completion controls.
 - [x] Persist contact and task changes in browser localStorage.
 - [x] Add unit tests for core CRM helper functions.
-- [ ] Run the test suite and production build in CI.
-- [ ] Verify a clean local setup from the documented instructions.
+- [x] Pass the GitHub Actions test suite and production build.
 
-## Phase 2 — Core capabilities
+## Phase 2 — Public demonstration
+
+- [x] Configure GitHub Actions CI workflow.
+- [x] Configure GitHub Pages deployment workflow.
+- [x] Deploy the public application to GitHub Pages.
+- [x] Publish the live URL in the README.
+- [x] Confirm latest CI and Pages deployment runs succeeded.
+- [ ] Verify all primary workflows in a clean browser session.
+- [ ] Add screenshots and a short walkthrough.
+
+## Phase 3 — Core capabilities
 
 - [ ] Add contact detail pages and richer activity timelines.
 - [ ] Add edit and delete workflows with confirmation.
 - [ ] Add CSV import/export for contacts.
 - [ ] Add task creation, due-date editing, and filtering.
 - [ ] Expand test coverage for validation, persistence, and UI interactions.
-
-## Phase 3 — Public demonstration
-
-- [x] Configure GitHub Actions CI workflow.
-- [x] Add GitHub Pages build and deployment workflow.
-- [ ] Enable GitHub Pages with GitHub Actions as the source in repository settings.
-- [ ] Confirm CI and Pages deployment succeed.
-- [ ] Verify the public application in a clean browser session.
-- [ ] Publish the verified live URL in the README.
-- [ ] Add screenshots and a short walkthrough.
 
 ## Phase 4 — Quality and expansion
 
