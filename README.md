@@ -1,81 +1,106 @@
 # TypeScript CRM Platform
 
-> A lightweight customer relationship management application for organizing contacts, tracking opportunities, and monitoring sales activity.
+> A lightweight CRM workspace for organizing contacts, tracking opportunities, and managing sales follow-ups.
 
-**Status:** Planning / initial documentation  
+**Status:** Interactive MVP implemented; CI and Pages deployment verification pending  
 **Primary language:** TypeScript  
-**Live demo:** Not deployed yet  
-**Deployment target:** GitHub Pages static demo (planned); any backend-dependent functionality will be clearly identified.
+**Frontend:** React + Vite  
+**Live demo:** Pending GitHub Pages activation and verification
 
 ## Overview
 
-Small businesses need a clear view of leads, customer records, sales stages, and next actions without the overhead of a large enterprise CRM.
+Northstar CRM is a small-business sales workspace designed to make the customer pipeline easier to understand and act on. It combines a compact KPI dashboard, contact records, an opportunity board, and a follow-up queue.
 
-This repository is a portfolio project intended to demonstrate practical, maintainable software built around a recognizable business use case. The capabilities below describe the planned scope; they should not be interpreted as already implemented.
+All included people and companies are synthetic demonstration records.
 
-## Intended users
+## Implemented features
 
-Small businesses, independent sales teams, operations professionals, and CRM-focused freelancers.
-
-## Planned capabilities
-
-- Contact and company records
-- Lead and opportunity pipeline
-- Follow-up tasks and activity history
-- Sales KPI dashboard
-- Search, filtering, and responsive layouts
+- Dashboard with open pipeline, won revenue, contact count, and follow-up metrics.
+- Contact directory with live search across name, company, email, and stage.
+- Add-contact form with basic field validation.
+- Opportunity pipeline board with five stages: New, Qualified, Proposal, Won, and Lost.
+- Update opportunity stages from the contact table or pipeline board.
+- Follow-up task queue with completion toggles.
+- Browser localStorage persistence for contact and task changes.
+- Responsive layout for desktop, tablet, and mobile screens.
+- Typed CRM models and unit tests for pipeline calculations, stage counts, search, and currency formatting.
 
 ## Technology
 
-TypeScript, React, Vite, and a typed data layer; persistence and authentication will be selected and documented before implementation.
+- TypeScript
+- React 18
+- Vite
+- Vitest
+- GitHub Actions
+- GitHub Pages (deployment workflow configured; activation/verification pending)
 
-The implementation will favor a small, understandable dependency set and documented setup steps. Final versions and infrastructure choices will be recorded as they are selected.
-
-## Planned project structure
+## Project structure
 
 ```text
 ts-crm-platform/
-├── src/ — application source
-├── src/components/ — reusable UI components
-├── src/features/ — CRM workflows
-├── src/types/ — shared TypeScript models
-├── tests/ — automated tests
-├── docs/ — product and deployment notes
+├── .github/workflows/
+│   ├── ci.yml
+│   └── deploy.yml
+├── src/
+│   ├── App.tsx
+│   ├── crm.ts
+│   ├── data.ts
+│   ├── main.tsx
+│   ├── styles.css
+│   └── types.ts
+├── tests/
+│   └── crm.test.ts
+├── index.html
+├── package.json
+├── tsconfig*.json
+├── vite.config.ts
 ├── README.md
 ├── ROADMAP.md
 └── CHANGELOG.md
 ```
 
-The exact structure may evolve as implementation begins.
+## Run locally
 
-## Getting started
+Requires Node.js 22 or a compatible current LTS release.
 
-The application is not implemented yet, so installation and run instructions will be added with the first working milestone. No commands are provided here that would imply functionality exists before it does.
+```bash
+npm install
+npm run dev
+```
 
-## Demo and deployment
+Run tests and create a production build:
 
-The public demonstration is planned for **GitHub Pages static demo (planned); any backend-dependent functionality will be clearly identified.**. The live URL will be added here after deployment and verification.
+```bash
+npm test
+npm run build
+npm run preview
+```
 
-## Quality approach
+## Demo data and persistence
 
-- Automated tests for core business logic.
-- Synthetic examples instead of private or customer data.
-- Clear validation and error handling.
-- Reproducible setup and deployment instructions.
-- Documentation kept aligned with the actual code.
+The starter workspace is populated with fictional contacts, opportunity values, and follow-up tasks. Changes are saved in the current browser's localStorage. Use a private/incognito window or clear the site's local storage to restore the original sample workspace.
 
-## Roadmap
+There is no server-side database, authentication, multi-user synchronization, or real email/calendar integration in this MVP. Do not enter confidential customer information.
 
-See [ROADMAP.md](ROADMAP.md) for planned milestones.
+## Deployment
 
-## Changelog
+A GitHub Actions workflow is configured to build the Vite app and publish the `dist/` directory to GitHub Pages. GitHub Pages must be enabled with GitHub Actions as its build source in repository settings before the public demo can be considered live.
 
-See [CHANGELOG.md](CHANGELOG.md) for project history.
+The live URL will be added here after the workflow succeeds and the deployed application is verified.
 
-## Portfolio outcomes
+## Roadmap and changelog
 
-Demonstrates TypeScript, frontend architecture, typed data modeling, dashboard development, and CRM workflow design.
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
 
-## Project status
+## Portfolio capabilities demonstrated
 
-This repository currently establishes the project definition and documentation baseline. Features, screenshots, test results, and deployment links will be added only after they exist and have been verified.
+Typed frontend architecture, reusable React components, data modeling, business KPI calculations, CRUD-style workflows, local persistence, responsive UI design, unit testing, and CI/CD configuration.
+
+## Current limitations
+
+- Browser-local data only; no backend or cross-device synchronization.
+- No authentication, roles, or team collaboration.
+- No import/export or external CRM integrations yet.
+- Automated test and production build results have not yet been verified in CI.
+- GitHub Pages activation and live browser acceptance remain pending.
